@@ -58,6 +58,19 @@ Three mysteries go away once you run this harness yourself:
 4. Score each output with pure functions (exact / keyword / length / rubric).
 5. Sum the points, print a table, declare A / B / tie.
 
+```text
+Case pack (fixed)
+   |
+   +-----> Prompt A  ----+-----> same model -----> score A
+   |                     |
+   +-----> Prompt B  ----+-----> same model -----> score B
+                                               |
+                                               v
+                                    sum · table · winner
+```
+
+Shop rule: keep the cases still. If you tweak the inputs while you rewrite the prompt, you are A/B-testing the weather, not the instruction. Fix the prompt, freeze the cases, let the table pick.
+
 ## Built-in demo
 
 | Arm | System vibe | What MockModel does |
@@ -96,7 +109,7 @@ Tests and `--mock` never need a key.
 
 ## Help / good first issues
 
-Scoped tickets live in [Issues](https://github.com/primeodin/prompt-lab/issues). Open contribution ideas:
+See [CONTRIBUTING.md](CONTRIBUTING.md) for fork → install → mock → PR. Scoped tickets live in [Issues](https://github.com/primeodin/prompt-lab/issues). Open contribution ideas:
 
 - **#1** — Add a `starts_with_label` scorer + rubric weight  
 - **#2** — `--csv` export of the comparison table  

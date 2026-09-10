@@ -50,6 +50,8 @@ Three mysteries go away once you run this harness yourself:
 - why scorers must stay pure (no LLM-as-judge in the critical path)
 - why a mock model is enough to teach the loop before you spend tokens
 
+Hand-worked trap (one case, full rubric): **[docs/why-specificity.md](docs/why-specificity.md)** — A earns a keyword consolation point and still loses 1–4; moving the case pack while you rewrite the prompt is A/B-testing the weather.
+
 ## The whole loop, in five lines
 
 1. Fix a tiny case pack (inputs + expected labels).
@@ -114,6 +116,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for fork → install → mock → PR. Sco
 - **#1** — Add a `starts_with_label` scorer + rubric weight  
 - **#2** — `--csv` export of the comparison table  
 - **#3** — Extra case pack (summarize-in-one-sentence) selectable via flag  
+
+Shop note (why B wins the table): [docs/why-specificity.md](docs/why-specificity.md)
 
 New to pull requests? Start at [first-commit-ai](https://github.com/primeodin/first-commit-ai), then come back.
 
